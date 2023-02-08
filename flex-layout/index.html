@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>测试页面</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/page.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="h1">弹性布局基础类</h1>
+      <div class="mb-32">
+        <span>弹性布局详细教程：</span>
+        <a
+          href="https://www.runoob.com/w3cnote/flex-grammar.html"
+          target="_blank"
+          >https://www.runoob.com/w3cnote/flex-grammar.html</a
+        >
+      </div>
+      <div class="section produce">
+        <div class="head f-sb-s">
+          <div class="title f-fs-c">一、基本介绍</div>
+        </div>
+        <div class="body">
+          <div class="desc">1、优势简介：</div>
+          <div class="indent">
+            （1）<b>兼容性好少踩坑</b>（特别是移动端，例：微信小程序）、<b>快捷高效</b>（类名简短易记、代码量少）、<b>功能强大</b>（能满足99%以上的布局需求，除了响应式布局、脱离文档流的定位；轻松处理行内或行内块元素的间距问题）。
+          </div>
+          <div class="desc">2、基本属性：</div>
+          <div class="indent">
+            <b>justify-content：</b
+            >flex-start、flex-end、center、space-between、space-around、<s
+              class="no-use"
+            >
+              space-evenly（兼容性不太好，且几乎很少用）</s
+            >
+          </div>
+          <div class="indent">
+            <b>align-items：</b>flex-start、flex-end、center、baseline、stretch
+          </div>
+          <div class="indent">
+            <b>flex-direction：</b><s class="no-use">row、</s>
+            <s class="no-use">row-reverse、</s>
+            column、
+            <s class="no-use">column-reverse</s>
+          </div>
+          <div class="indent">
+            <b>flex-wrap：</b><s class="no-use">nowrap、</s>
+            wrap、
+            <s class="no-use">wrap-reverse</s>
+          </div>
+          <div class="indent">
+            <s class="no-use"
+              ><b>align-content：</b
+              >flex-start、flex-end、center、space-between、space-around、
+              stretch</s
+            >
+          </div>
+          <div class="indent tips">
+            注：带删除线的是几乎用不到的属性，故类名中的对应位置不应该包含该属性的缩写。
+          </div>
+          <div class="desc">3、使用示例及含义剖析：</div>
+          <div class="f-sb-s">
+            <img class="exam-img mr-8" src="./img/example-1.png" />
+            <img class="exam-img" src="./img/example-2.png" />
+          </div>
+          <div class="tips">
+            注：(1)类名最少包含3段字符，最多4段字符，用“-”进行连接，每段字符均取自对应属性的缩写。
+          </div>
+          <div class="indent tips">
+            &nbsp;&nbsp;&nbsp;(2)对于项目的伸缩特性，文本省略处理，记得带上f-0、f-1、line-1（不能跟
+            f-sb-c 等类名放在一起）等类名。
+          </div>
+        </div>
+      </div>
+      <!-- inline、inline-bolock间距问题 -->
+      <div class="section inline">
+        <div class="head f-sb-s">
+          <div class="title f-fs-c">
+            二、轻松解决inline、inline-block的间距问题（传统解决方案：float、父级font-size:
+            0）
+          </div>
+        </div>
+        <div class="body">
+          <div class="desc">
+            1、inline、inline-block元素并排时，会有间距问题
+          </div>
+          <div class="exam bg-box">
+            <span class="item bg-red">项目1</span>
+            <span class="item bg-blue">项目2</span>
+          </div>
+          <div class="desc">2、使用弹性布局处理（黄色盒子加上类 f-fs-c ）</div>
+          <div class="exam bg-box f-fs-c">
+            <span class="item bg-red">项目1</span>
+            <span class="item bg-blue">项目2</span>
+          </div>
+        </div>
+      </div>
+      <!-- 常见应用场景 -->
+      <div class="section common">
+        <div class="head f-sb-s">
+          <div class="title f-fs-c">三、常见应用场景</div>
+        </div>
+        <div class="body">
+          <div class="desc">1、不换行</div>
+          <div class="exam one">
+            <div class="flex-name f-c-c">f-c-c</div>
+            <div class="bg-box f-c-c f-1">
+              <div class="item bg-red">项目1</div>
+              <div class="item bg-blue">项目2</div>
+              <div class="item bg-green">项目2</div>
+            </div>
+            <div class="flex-name f-c-c">f-sb-c</div>
+            <div class="bg-box f-sb-c f-1">
+              <div class="item bg-red">项目1</div>
+              <div class="item bg-blue">项目2</div>
+              <div class="item bg-green">项目2</div>
+            </div>
+            <div class="flex-name f-c-c">f-sa-c</div>
+            <div class="bg-box f-sa-c f-1">
+              <div class="item bg-red">项目1</div>
+              <div class="item bg-blue">项目2</div>
+              <div class="item bg-green">项目2</div>
+            </div>
+            <div class="flex-name f-c-c-c">
+                <div>f-sa-s f-se</div>
+                <div class="tips">f-sb-se的兼容性处理方案</div>
+            </div>
+            <div class="bg-box f-sa-s f-se f-1">
+              <div class="item-s f-c-c-c bg-red" style="height: 90px">
+                项目1<br />height: 90px
+              </div>
+              <div class="item-s f-c-c-c bg-blue">项目2<br /></div>
+              <div class="item-s f-c-c-c bg-green">项目2<br /></div>
+            </div>
+            <div class="flex-name f-c-c-c">
+                <div>f-sb-s</div>
+                <div class="tips">高度会跟最高的项目对齐</div>
+            </div>
+            <div class="bg-box f-sb-s f-1">
+              <div class="item-s f-c-c-c bg-red" style="height: 90px">
+                项目1<br />height: 90px
+              </div>
+              <div class="item-s f-c-c-c bg-blue">项目2<br /></div>
+              <div class="item-s f-c-c-c bg-green">项目2<br /></div>
+            </div>
+            <div class="flex-name f-c-c">其他类似，不再列举……</div>
+          </div>
+          <div class="desc">2、x轴换行</div>
+          <div class="exam two">
+            <div class="flex-name f-c-c-c">
+              <div>f-sb-fs-w</div>
+              <div class="tips">除最后一个项目外都有右边距：margin-right:16px</div>
+            </div>
+            <div class="bg-box one f-sb-fs-w">
+              <div class="item bg-red">项目1<br />width: 25%<br />margin-right: 16px</div>
+              <div class="item bg-blue">项目2<br />width: 25%<br />margin-right: 16px</div>
+              <div class="item bg-green">
+                项目3<br />width: 25%<br />margin-right: 16px
+              </div>
+              <div class="item bg-purple">
+                项目4<br />width: 25%<br />margin-right: 16px
+              </div>
+              <div class="item bg-pink">项目5<br />width: 25%<br />margin-right: 16px</div>
+            </div>
+            <div class="flex-name f-c-c">f-fs-fs-w</div>
+            <div class="bg-box two f-fs-fs-w">
+              <div class="item bg-red f-1">
+                项目1<br />.f-1<br />flex-basis: 27%
+              </div>
+              <div class="item bg-blue f-1">
+                项目2<br />.f-1<br />flex-basis: 27%
+              </div>
+              <div class="item bg-green f-1">
+                项目3<br />.f-1<br />flex-basis: 27%
+              </div>
+              <div class="item bg-purple f-1">
+                项目4<br />.f-1<br />flex-basis: 27%
+              </div>
+              <div class="item bg-pink f-1">
+                项目5<br />.f-1<br />flex-basis: 27%
+              </div>
+              <div class="item bg-orange f-1">
+                项目6<br />.f-1<br />flex-basis: 27%
+              </div>
+            </div>
+            <div class="flex-name f-c-c-c">
+              <div>f-sb-fs-w</div>
+              <div class="tips">f-empty是填充元素，是不可见的</div>
+            </div>
+            <div class="bg-box three f-sb-fs-w">
+              <div class="item bg-red">项目1<br />width: 25%</div>
+              <div class="item bg-blue">项目2<br />width: 25%</div>
+              <div class="item bg-green">项目3<br />width: 25%</div>
+              <div class="item bg-purple">项目4<br />width: 25%</div>
+              <div class="item bg-pink">项目5<br />width: 25%</div>
+              <div class="item bg-orange">项目6<br />width: 25%</div>
+              <div class="item bg-gray empty">
+                .f-empty<br />此处应当不可见<br />width: 25%
+              </div>
+              <div class="item bg-lightgray empty">
+                .f-empty<br />此处应当不可见<br />width: 25%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 固定头部或底部，其他区域可滚动的场景 -->
+      <div class="section fixed-head-foot">
+        <div class="head f-sb-s">
+          <div class="title f-fs-c">
+            四、固定头部或底部，其他区域可滚动的场景
+          </div>
+        </div>
+        <div class="body">
+          <div class="exam f-sb-fs-w">
+            <div class="page-box f-1">
+              <div class="desc">1、黄色容器高度固定(f-fs-s-c)</div>
+              <div class="page bg-box f-fs-s-c">
+                <div class="h bg-red f-0 f-c-c">.f-0<br />height: 70px;</div>
+                <div class="b bg-blue">
+                  overflow:auto<br />
+                  当内容足够多，撑满时会出现滚动条
+                  <br />
+                  1<br />2<br />3<br />4<br />5
+                  <!-- <br />6<br />7<br />8<br />9<br />10<br /> -->
+                  <!-- 11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>
+                                21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/> -->
+                </div>
+                <div class="f bg-green f-0 f-c-c">.f-0<br />height: 70px;</div>
+              </div>
+            </div>
+            <div class="page-box f-1">
+              <div class="desc">2、黄色容器高度固定(f-fs-s-c)</div>
+              <div class="page bg-box f-sb-s-c">
+                <div class="h bg-red f-0 f-c-c">.f-0<br />height: 70px;</div>
+                <div class="b bg-blue f-1">
+                  .f-1<br />
+                  overflow:auto<br />
+                  即使内容不能够撑满，也会延伸至铺满屏幕高度 1<br />2<br />3<br />4<br />5
+                  <!-- <br />6<br />7<br />8<br />9<br />10<br /> -->
+                  <!-- 11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20<br />
+                                21<br />22<br />23<br />24<br />25<br />26<br />27<br />28<br />29<br />30<br /> -->
+                </div>
+                <div class="f bg-green f-0 f-c-c">.f-0<br />height: 70px;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section demo">
+        <div class="head f-sb-s">
+          <div class="title f-fs-c">五、示例Demo</div>
+        </div>
+        <div class="body">
+          <div class="desc">1、html和less代码</div>
+          <div class="imgs f-sb-fs">
+            <img class="img" src="./img/html-1.png" />
+            <img class="img" src="./img/less-1.png" />
+            <img class="img" src="./img/less-2.png" />
+            <div class="tips">
+              注：在html中布局，从蓝湖中一键粘贴复制样式代码到 less
+              中，加上适当的padding、margin，快速完成静态页面开发。
+            </div>
+          </div>
+          <div class="desc">2、效果图</div>
+          <div class="layout">
+            <header class="header f-sb-c">
+              <div class="f-fs-c">
+                <img class="logo" />
+                <h1 class="title">XXXX网页标题</h1>
+              </div>
+              <div class="area f-1 f-c-c">header</div>
+              <nav class="navs f-fe-c f-0">
+                <a class="link" href="#">首页</a>
+                <a class="link" href="#">导航1</a>
+                <a class="link" href="#">导航2</a>
+                <a class="link" href="#">导航3</a>
+                <a class="link" href="#">导航4</a>
+              </nav>
+              <img class="avatar" />
+            </header>
+            <article class="bodyer f-sb-s">
+              <aside class="aside f-0 f-sb-s-c">
+                <ul class="f-0">
+                  <li class="line-1">侧边栏</li>
+                  <li class="line-1">侧边栏侧边栏侧边栏侧边栏侧边栏</li>
+                </ul>
+                <div class="area f-c-c f-1">aside</div>
+              </aside>
+              <div class="content f-1">
+                <div class="area f-c-c">content</div>
+              </div>
+            </article>
+            <footer class="footer f-c-c">
+                <div class="area f-c-c">footer</div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+/**
+* 弹性布局类
+* f-sb-c       x轴两端对齐(space-between)，y轴垂直居中(center) 
+* f-sb-s-c     在列方向的前提下(column)，x轴占满(stretch)，y轴两端对齐(space-between)
+* f-sb-fs-w    x轴两端对齐(space-between)，y轴从上到下依次排列(flex-start)，占满一行自动换行(wrap)
+* f-sb-fs-w-c  x轴两端对齐(space-between)，y轴从上到下依次排列(flex-start)，占满一行自动换行(wrap)，多个行在y轴上居中(center)
+*/
+$justifyContent: (
+  fs: flex-start,
+  fe: flex-end,
+  c: center,
+  sb: space-between,
+  sa: space-around,
+  // se: space-evenly //注意space-evenly的兼容性不太好，且几乎很少用
+);
+$alignItems: (
+  fs: flex-start,
+  fe: flex-end,
+  c: center,
+  b: baseline,
+  s: stretch,
+);
+$flexDirection: (
+  // r: row,
+  // rr: row-reverse,
+  c: column,
+  // cr: column-reverse,,
+);
+$flexWrap: (
+  // n: nowrap,
+  w: wrap,
+  // wr: wrap-reverse,,
+);
+//如果再嵌套循环一层，生成的代码太多了，且用的少，故不采用
+// $alignContent: (
+//   fs: flex-start,
+//   fe: flex-end,
+//   c: center,
+//   sb: space-between,
+//   sa: space-around ,
+//   s: stretch
+// );
+@each $jKey, $jVal in $justifyContent {
+  @each $aKey, $aVal in $alignItems {
+    .f-#{$jKey}-#{$aKey} {
+      display: flex;
+      justify-content: $jVal;
+      align-items: $aVal;
+    }
+    @each $dKey, $dVal in $flexDirection {
+      .f-#{$jKey}-#{$aKey}-#{$dKey} {
+        display: flex;
+        justify-content: $jVal;
+        align-items: $aVal;
+        flex-direction: $dVal;
+      }
+    }
+    @each $wKey, $wVal in $flexWrap {
+      .f-#{$jKey}-#{$aKey}-#{$wKey} {
+        display: flex;
+        justify-content: $jVal;
+        align-items: $aVal;
+        flex-wrap: $wVal;
+      }
+    }
+    // @each $cKey, $cVal in $alignContent {
+    //   .f-#{$jKey}-#{$aKey}-w-#{$cKey} {
+    //     display: flex;
+    //     justify-content: $jVal;
+    //     align-items: $aVal;
+    //     flex-wrap: wrap;
+    //     align-content: $cVal;
+    //   }
+    // };
+  }
+}
+
+//弹性布局 justify-content: space-evenly; 的兼容性处理方案
+.f-se {
+  justify-content: space-between;
+  &::before,
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+  }
+}
+
+/**
+* 当呈多行多列排列且最后一行凑不满一行时，为了行列对齐好看，需要使用额外的空盒子填充占满（需加这个类）
+*/
+.f-empty {
+  height: 0 !important;
+  visibility: hidden !important;
+}
+
+/**
+* 弹性布局的项目伸缩比例
+* f-0 ~ f-3
+* f-0 要单独处理
+*/
+.f-0 {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+@for $i from 1 through 3 {
+  .f-#{$i} {
+    flex: $i;
+  }
+}
+
+/**
+* 文本省略
+* line-1 ~ line-3
+* 下面的注释不能删除，否则中间的那行代码将不会被保存编译到css文件里面
+*/
+@for $i from 1 through 3 {
+  .line-#{$i} {
+    /*! autoprefixer: ignore next */
+    display: -webkit-box;
+    /* autoprefixer: off */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $i;
+    // 当英文单词很长时的换行处理
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}
+
+/**
+* padding、margin间距
+* p-2 ~ ml-32
+*/
+$gapTypes: (
+  p: padding,
+  m: margin,
+);
+$gapDirections: (
+  a: all,
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+);
+@each $tKey, $tVal in $gapTypes {
+  @each $dKey, $dVal in $gapDirections {
+    @for $i from 1 through 16 {
+      $num: $i * 2;
+      @if $dKey == a {
+        .#{$tKey}-#{$num} {
+          #{$tVal}: #{$num}px;
+        }
+      } @else {
+        .#{$tKey}#{$dKey}-#{$num} {
+          #{$tVal}-#{$dVal}: #{$num}px;
+        }
+      }
+    }
+  }
+}

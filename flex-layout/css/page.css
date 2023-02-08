@@ -1,0 +1,236 @@
+.bg-box {
+  border: 4px solid yellowgreen;
+  background: yellow;
+}
+.bg-red {
+  background: red;
+}
+.bg-blue {
+  background: lightblue;
+}
+.bg-green {
+  background: green;
+}
+.bg-purple {
+  background: purple;
+}
+.bg-pink {
+  background: pink;
+}
+.bg-orange {
+  background: orange;
+}
+.bg-gray {
+  background: gray;
+}
+.bg-lightgray {
+  background: lightgray;
+}
+.container {
+  padding: 32px 16px 60px;
+  width: 1200px;
+  max-height: 100vh;
+  overflow: auto;
+  margin: 0 auto;
+  background: #dddddd;
+}
+.container .h1 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.section {
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+}
+.section .head {
+  padding-bottom: 8px;
+}
+.section .head .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.section .head .title::before {
+  content: "";
+  display: block;
+  height: 1.2em;
+  width: 6px;
+  border-radius: 3px;
+  margin-right: 0.5em;
+  background: #000;
+}
+.section .body {
+  padding-left: 20px;
+}
+.section .desc {
+  margin: 8px 0;
+}
+.section .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  text-align: center;
+  padding: 0 10px;
+}
+.produce .indent {
+  text-indent: 1em;
+}
+.produce .no-use {
+  opacity: 0.5;
+}
+.produce .tips {
+  margin-top: 8px;
+  color: red;
+}
+.produce .exam-img:nth-child(1) {
+  width: 65%;
+}
+.produce .exam-img:nth-child(2) {
+  width: 35%;
+}
+.inline .item {
+  display: inline-block;
+  width: 40%;
+  line-height: 50px;
+}
+.common .flex-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+.common .flex-name .tips {
+  color: red;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.common .exam.one .item {
+  width: 25%;
+}
+.common .exam.one .bg-box:not(:last-child) {
+  margin-bottom: 8px;
+}
+.common .exam.one .item-s {
+  text-align: center;
+  width: 25%;
+}
+.common .exam.two .item {
+  height: 100px;
+}
+.common .exam.two .bg-box.one .item {
+  width: 25%;
+}
+.common .exam.two .bg-box.one .item:not(:last-child) {
+  margin-right: 16px;
+}
+.common .exam.two .bg-box.two .item {
+  flex-basis: 27%;
+}
+.common .exam.two .bg-box.three .item {
+  width: 25%;
+}
+.common .exam.two .bg-box.three .empty {
+  font-size: 14px;
+  opacity: 0.3;
+}
+.fixed-head-foot .page-box:nth-child(2n-1) {
+  margin-right: 16px;
+}
+.fixed-head-foot .page {
+  height: 400px;
+  overflow: auto;
+}
+.fixed-head-foot .page .h {
+  height: 70px;
+}
+.fixed-head-foot .page .b {
+  overflow: auto;
+}
+.fixed-head-foot .page .f {
+  height: 70px;
+}
+.demo .imgs {
+  position: relative;
+}
+.demo .imgs .img:not(:last-child) {
+  margin-right: 8px;
+}
+.demo .imgs .img:nth-child(1) {
+  width: 50%;
+}
+.demo .imgs .img:nth-child(2) {
+  width: 27%;
+}
+.demo .imgs .img:nth-child(3) {
+  width: 23%;
+}
+.demo .imgs .tips {
+  color: red;
+  position: absolute;
+  width: 50%;
+  bottom: 130px;
+  left: 0;
+}
+.demo .layout .area {
+  color: red;
+  font-size: 24px;
+  font-weight: 500;
+}
+.demo .layout .header {
+  padding: 0 16px;
+  height: 80px;
+  background: #333;
+}
+.demo .layout .header .logo {
+  height: 60px;
+  width: 60px;
+  margin-right: 16px;
+  border-radius: 50%;
+  background: #999;
+}
+.demo .layout .header .title {
+  color: #fff;
+  font-size: 22px;
+}
+.demo .layout .header .navs {
+  margin: 0 16px;
+}
+.demo .layout .header .navs .link {
+  color: #ddd;
+  text-decoration: none;
+}
+.demo .layout .header .navs .link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.demo .layout .header .navs .link:not(:last-child) {
+  margin-right: 1em;
+}
+.demo .layout .header .avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #999;
+}
+.demo .layout .bodyer {
+  background: #ccc;
+}
+.demo .layout .bodyer .aside {
+  padding: 8px 16px;
+  height: 300px;
+  width: 200px;
+  background: #999;
+  overflow: auto;
+}
+.demo .layout .bodyer .content {
+  padding: 8px 16px;
+  overflow: auto;
+}
+.demo .layout .footer {
+  height: 40px;
+  color: #fff;
+  background: #000;
+}
