@@ -25,20 +25,21 @@
           <div id="sec-1" class="title f-fs-c">一、基本介绍</div>
         </div>
         <div class="body">
-          <div class="desc">1、源文件：</div>
+          <div class="desc">1、优势简介：</div>
           <div class="indent">
-            <a href="https://gitee.com/fanlichuan/produce/blob/master/flex-layout/css/base.css">Css文件</a>、
-            <a href="https://gitee.com/fanlichuan/produce/blob/master/flex-layout/css/base.less">Less文件</a>、
-            <a href="https://gitee.com/fanlichuan/produce/blob/master/flex-layout/css/base.scss">Sass文件</a></div>
-          <div class="desc">2、优势简介：</div>
-          <div class="indent">
-            （1）<b>功能强大：</b>能满足99%以上的布局需求，除了响应式布局、脱离文档流的定位；轻松处理行内或行内块元素的间距问题。
+            （1）<b>功能强大：</b>能满足99%以上的布局需求（除了响应式布局、脱离文档流的定位）；轻松处理行内和行内块元素的间距问题。
           </div>
           <div class="indent">
             （2）<b>快捷高效：</b>类名简短易记、代码量少。
           </div>
           <div class="indent">
-            （3）<b>兼容性好（少踩坑）：</b>特别是移动端，例：微信小程序。
+            （3）<b>兼容性好（少踩坑）：</b>PC端、移动端的兼容性都挺好。例：开发微信小程序时能少踩坑。
+          </div>
+          <div class="desc">2、源文件：</div>
+          <div class="indent">
+            <a target="_blank" href="https://gitee.com/fanlichuan/produce/blob/master/flex-layout/css/base.css">Css文件</a>、
+            <a target="_blank" href="https://gitee.com/fanlichuan/produce/blob/master/flex-layout/css/base.less">Less文件</a>、
+            <a target="_blank" href="https://gitee.com/fanlichuan/produce/blob/master/flex-layout/css/base.scss">Sass文件</a>
           </div>
           <div class="desc">3、基本属性：</div>
           <div class="indent">
@@ -162,9 +163,9 @@
               <div class="item-s f-c-c-c bg-blue">项目2<br /></div>
               <div class="item-s f-c-c-c bg-green">项目2<br /></div>
             </div>
-            <div class="flex-name f-c-c">其他类似，不再列举……</div>
+            <div class="mt-16 f-c-c">其他类似，不再列举……</div>
           </div>
-          <div class="desc">2、x轴换行</div>
+          <div class="desc">2、换行：项目必须设置宽度，当超过容器最大宽度时，才能正常换行</div>
           <div class="exam two">
             <div class="flex-name f-c-c-c">
               <div>f-sb-fs-w</div>
@@ -189,7 +190,10 @@
                 项目5<br />width: 25%<br />margin-right: 16px
               </div>
             </div>
-            <div class="flex-name f-c-c">f-fs-fs-w</div>
+            <div class="flex-name f-c-c-c">
+              <div>f-fs-fs-w</div>
+              <div class="tips">flex-basis与width、height的关系：<a href="https://juejin.cn/post/6844903914148462599" target="_blank">https://juejin.cn/post/6844903914148462599</a></div>
+            </div>
             <div class="bg-box two f-fs-fs-w">
               <div class="item bg-red f-1">
                 项目1<br />.f-1<br />flex-basis: 27%
