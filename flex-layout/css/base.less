@@ -131,42 +131,42 @@ each(@justifyContent, .(@jVal, @jKey) {
 }
 .for-line(1);
 
-// /**
-// * padding、margin间距
-// * pt-2 ~ ml-32
-// */
-// @gapTypes: {
-//   p: padding;
-//   m: margin;
-// };
-// @gapDirections: {
-//   a: all;
-//   t: top;
-//   r: right;
-//   b: bottom;
-//   l: left;
-// };
-// each(@gapTypes, .(@tVal, @tKey) {
-//   each(@gapDirections, .(@dVal, @dKey) {
-//     .for-g(@i) when (@i <=16) {
-//       @num: @i*2;
-//       .@{tKey}-@{num} when (@dKey =a) {
-//           @{tVal}: @num*1px;
-//       }
-//       .@{tKey}@{dKey}-@{num} when (@dKey =t) {
-//           @{tVal}-@{dVal}: @num*1px;
-//       }
-//       .@{tKey}@{dKey}-@{num} when (@dKey =r) {
-//           @{tVal}-@{dVal}: @num*1px;
-//       }
-//       .@{tKey}@{dKey}-@{num} when (@dKey =b) {
-//           @{tVal}-@{dVal}: @num*1px;
-//       }
-//       .@{tKey}@{dKey}-@{num} when (@dKey =l) {
-//           @{tVal}-@{dVal}: @num*1px;
-//       }
-//       .for-g((@i + 1)); // 递归调用自身
-//     }
-//     .for-g(1); // 调用循环,从1，直到<=16
-//   });
-// });
+/**
+* padding、margin间距
+* pt-2 ~ ml-32
+*/
+@gapTypes: {
+  p: padding;
+  m: margin;
+};
+@gapDirections: {
+  a: all;
+  t: top;
+  r: right;
+  b: bottom;
+  l: left;
+};
+each(@gapTypes, .(@tVal, @tKey) {
+  each(@gapDirections, .(@dVal, @dKey) {
+    .for-g(@i) when (@i <=16) {
+      @num: @i*2;
+      .@{tKey}-@{num} when (@dKey =a) {
+          @{tVal}: @num*1px;
+      }
+      .@{tKey}@{dKey}-@{num} when (@dKey =t) {
+          @{tVal}-@{dVal}: @num*1px;
+      }
+      .@{tKey}@{dKey}-@{num} when (@dKey =r) {
+          @{tVal}-@{dVal}: @num*1px;
+      }
+      .@{tKey}@{dKey}-@{num} when (@dKey =b) {
+          @{tVal}-@{dVal}: @num*1px;
+      }
+      .@{tKey}@{dKey}-@{num} when (@dKey =l) {
+          @{tVal}-@{dVal}: @num*1px;
+      }
+      .for-g((@i + 1)); // 递归调用自身
+    }
+    .for-g(1); // 调用循环,从1，直到<=16
+  });
+});
