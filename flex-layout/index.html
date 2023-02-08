@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>测试页面</title>
+    <title>弹性布局基础类使用介绍</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/page.css" />
   </head>
-
   <body>
     <div class="container">
       <h1 class="h1">弹性布局基础类</h1>
@@ -23,14 +22,25 @@
       </div>
       <div class="section produce">
         <div class="head f-sb-s">
-          <div class="title f-fs-c">一、基本介绍</div>
+          <div id="sec-1" class="title f-fs-c">一、基本介绍</div>
         </div>
         <div class="body">
-          <div class="desc">1、优势简介：</div>
+          <div class="desc">1、源文件：</div>
           <div class="indent">
-            （1）<b>兼容性好少踩坑</b>（特别是移动端，例：微信小程序）、<b>快捷高效</b>（类名简短易记、代码量少）、<b>功能强大</b>（能满足99%以上的布局需求，除了响应式布局、脱离文档流的定位；轻松处理行内或行内块元素的间距问题）。
+            <a href="https://gitee.com/fanlichuan/produce/blob/master/flex-layout/css/base.css">Css文件</a>、
+            <a href="https://gitee.com/fanlichuan/produce/blob/master/flex-layout/css/base.less">Less文件</a>、
+            <a href="https://gitee.com/fanlichuan/produce/blob/master/flex-layout/css/base.scss">Sass文件</a></div>
+          <div class="desc">2、优势简介：</div>
+          <div class="indent">
+            （1）<b>功能强大：</b>能满足99%以上的布局需求，除了响应式布局、脱离文档流的定位；轻松处理行内或行内块元素的间距问题。
           </div>
-          <div class="desc">2、基本属性：</div>
+          <div class="indent">
+            （2）<b>快捷高效：</b>类名简短易记、代码量少。
+          </div>
+          <div class="indent">
+            （3）<b>兼容性好（少踩坑）：</b>特别是移动端，例：微信小程序。
+          </div>
+          <div class="desc">3、基本属性：</div>
           <div class="indent">
             <b>justify-content：</b
             >flex-start、flex-end、center、space-between、space-around、<s
@@ -63,24 +73,28 @@
           <div class="indent tips">
             注：带删除线的是几乎用不到的属性，故类名中的对应位置不应该包含该属性的缩写。
           </div>
-          <div class="desc">3、使用示例及含义剖析：</div>
+          <div class="desc">4、使用示例及含义剖析：</div>
           <div class="f-sb-s">
             <img class="exam-img mr-8" src="./img/example-1.png" />
             <img class="exam-img" src="./img/example-2.png" />
           </div>
-          <div class="tips">
-            注：(1)类名最少包含3段字符，最多4段字符，用“-”进行连接，每段字符均取自对应属性的缩写。
+          <div class="tips">注：</div>
+          <div class="tips indent">
+            （1）类名最少包含3段字符，最多4段字符，用“-”进行连接，每段字符均取自对应属性的缩写。
           </div>
           <div class="indent tips">
-            &nbsp;&nbsp;&nbsp;(2)对于项目的伸缩特性，文本省略处理，记得带上f-0、f-1、line-1（不能跟
+            （2）对于项目的伸缩特性，文本省略处理，记得带上f-0、f-1、line-1（不能跟
             f-sb-c 等类名放在一起）等类名。
+          </div>
+          <div class="indent tips">
+            （3）第五段字符用时情况极少，会生成过多无用css代码，故不计划纳入，只是需要知道这个属性。如有特殊情况需要大量使用，将对应注释放开即可，使用示例：f-sb-fs-w-sb。
           </div>
         </div>
       </div>
       <!-- inline、inline-bolock间距问题 -->
       <div class="section inline">
         <div class="head f-sb-s">
-          <div class="title f-fs-c">
+          <div id="sec-2" class="title f-fs-c">
             二、轻松解决inline、inline-block的间距问题（传统解决方案：float、父级font-size:
             0）
           </div>
@@ -103,7 +117,7 @@
       <!-- 常见应用场景 -->
       <div class="section common">
         <div class="head f-sb-s">
-          <div class="title f-fs-c">三、常见应用场景</div>
+          <div id="sec-3" class="title f-fs-c">三、常见应用场景</div>
         </div>
         <div class="body">
           <div class="desc">1、不换行</div>
@@ -127,8 +141,8 @@
               <div class="item bg-green">项目2</div>
             </div>
             <div class="flex-name f-c-c-c">
-                <div>f-sa-s f-se</div>
-                <div class="tips">f-sb-se的兼容性处理方案</div>
+              <div>f-sa-s f-se</div>
+              <div class="tips">f-sb-se的兼容性处理方案</div>
             </div>
             <div class="bg-box f-sa-s f-se f-1">
               <div class="item-s f-c-c-c bg-red" style="height: 90px">
@@ -138,8 +152,8 @@
               <div class="item-s f-c-c-c bg-green">项目2<br /></div>
             </div>
             <div class="flex-name f-c-c-c">
-                <div>f-sb-s</div>
-                <div class="tips">高度会跟最高的项目对齐</div>
+              <div>f-sb-s</div>
+              <div class="tips">高度会跟最高的项目对齐</div>
             </div>
             <div class="bg-box f-sb-s f-1">
               <div class="item-s f-c-c-c bg-red" style="height: 90px">
@@ -154,18 +168,26 @@
           <div class="exam two">
             <div class="flex-name f-c-c-c">
               <div>f-sb-fs-w</div>
-              <div class="tips">除最后一个项目外都有右边距：margin-right:16px</div>
+              <div class="tips">
+                除最后一个项目外都有右边距：margin-right:16px
+              </div>
             </div>
             <div class="bg-box one f-sb-fs-w">
-              <div class="item bg-red">项目1<br />width: 25%<br />margin-right: 16px</div>
-              <div class="item bg-blue">项目2<br />width: 25%<br />margin-right: 16px</div>
+              <div class="item bg-red">
+                项目1<br />width: 25%<br />margin-right: 16px
+              </div>
+              <div class="item bg-blue">
+                项目2<br />width: 25%<br />margin-right: 16px
+              </div>
               <div class="item bg-green">
                 项目3<br />width: 25%<br />margin-right: 16px
               </div>
               <div class="item bg-purple">
                 项目4<br />width: 25%<br />margin-right: 16px
               </div>
-              <div class="item bg-pink">项目5<br />width: 25%<br />margin-right: 16px</div>
+              <div class="item bg-pink">
+                项目5<br />width: 25%<br />margin-right: 16px
+              </div>
             </div>
             <div class="flex-name f-c-c">f-fs-fs-w</div>
             <div class="bg-box two f-fs-fs-w">
@@ -212,14 +234,17 @@
       <!-- 固定头部或底部，其他区域可滚动的场景 -->
       <div class="section fixed-head-foot">
         <div class="head f-sb-s">
-          <div class="title f-fs-c">
+          <div id="sec-4" class="title f-fs-c">
             四、固定头部或底部，其他区域可滚动的场景
           </div>
         </div>
         <div class="body">
+          <div class="tips">注：在黄色容器高度固定（即有确定的值，如：100vh，能够继承到的100%）的情况下：</div>
           <div class="exam f-sb-fs-w">
             <div class="page-box f-1">
-              <div class="desc">1、黄色容器高度固定(f-fs-s-c)</div>
+              <div class="desc">1、黄色容器类：f-fs-s-c</div>
+              <div class="desc"><b>描述：</b>头部、底部固定高度（f-0），中间不设置高度，底部会跟随高度自适应变化。</div>
+              <div class="desc"><b>场景举例：</b>答题页面。问题栏高度固定，选项栏个数不定，超过最大高度出现滚动条，未超过，则上一下或下一题按钮跟随高度自适应变化。</div>
               <div class="page bg-box f-fs-s-c">
                 <div class="h bg-red f-0 f-c-c">.f-0<br />height: 70px;</div>
                 <div class="b bg-blue">
@@ -235,7 +260,9 @@
               </div>
             </div>
             <div class="page-box f-1">
-              <div class="desc">2、黄色容器高度固定(f-fs-s-c)</div>
+              <div class="desc">2、黄色容器类：f-fs-s-c</div>
+              <div class="desc"><b>描述：</b>头部、底部固定高度（f-0），中间伸缩高度（f-1），不管内容是否超过最大高度，底部始终位于页面最下方。</div>
+              <div class="desc"><b>场景举例：</b>顶部标题、底部按钮、中间内容高度均固定，且中间内容高度会自适应撑满屏幕高度，当内容超过最大高度时会出现滚动条。</div>
               <div class="page bg-box f-sb-s-c">
                 <div class="h bg-red f-0 f-c-c">.f-0<br />height: 70px;</div>
                 <div class="b bg-blue f-1">
@@ -254,7 +281,7 @@
       </div>
       <div class="section demo">
         <div class="head f-sb-s">
-          <div class="title f-fs-c">五、示例Demo</div>
+          <div id="sec-5" class="title f-fs-c">五、示例Demo</div>
         </div>
         <div class="body">
           <div class="desc">1、html和less代码</div>
@@ -297,7 +324,7 @@
               </div>
             </article>
             <footer class="footer f-c-c">
-                <div class="area f-c-c">footer</div>
+              <div class="area f-c-c">footer</div>
             </footer>
           </div>
         </div>

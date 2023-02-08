@@ -62,16 +62,16 @@ $flexWrap: (
         align-items: $aVal;
         flex-wrap: $wVal;
       }
+      // @each $cKey, $cVal in $alignContent {
+      //   .f-#{$jKey}-#{$aKey}-#{$wKey}-#{$cKey} {
+      //     display: flex;
+      //     justify-content: $jVal;
+      //     align-items: $aVal;
+      //     flex-wrap: $wVa;
+      //     align-content: $cVal;
+      //   }
+      // };
     }
-    // @each $cKey, $cVal in $alignContent {
-    //   .f-#{$jKey}-#{$aKey}-w-#{$cKey} {
-    //     display: flex;
-    //     justify-content: $jVal;
-    //     align-items: $aVal;
-    //     flex-wrap: wrap;
-    //     align-content: $cVal;
-    //   }
-    // };
   }
 }
 

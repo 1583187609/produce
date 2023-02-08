@@ -62,16 +62,16 @@ each(@justifyContent, .(@jVal, @jKey) {
         align-items: @aVal;
         flex-wrap: @wVal;
       }
+      // each(@alignContent, .(@cVal, @cKey) {
+      //   .f-@{jKey}-@{aKey}-@{wKey}-@{cKey} {
+      //     display: flex;
+      //     justify-content: @jVal;
+      //     align-items: @aVal;
+      //     flex-wrap: @wVal;
+      //     align-content: @cVal;
+      //   }
+      // });
     });
-    // each(@alignContent, .(@cVal, @cKey) {
-    //   .f-@{jKey}-@{aKey}-w-@{cKey} {
-    //     display: flex;
-    //     justify-content: @jVal;
-    //     align-items: @aVal;
-    //     flex-wrap: wrap;
-    //     align-content: @cVal;
-    //   }
-    // });
   });
 });
 
