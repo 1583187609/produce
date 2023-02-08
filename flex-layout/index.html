@@ -96,19 +96,19 @@
       <div class="section inline">
         <div class="head f-sb-s">
           <div id="sec-2" class="title f-fs-c">
-            二、轻松解决inline、inline-block的间距问题（传统解决方案：float、父级font-size:
-            0）
+            二、轻松解决inline、inline-block的间距问题
           </div>
         </div>
         <div class="body">
           <div class="desc">
-            1、inline、inline-block元素并排时，会有间距问题
+            1、inline、inline-block元素并排时，会有间距问题（传统解决方案：float 或 父级font-size:
+            0）
           </div>
           <div class="exam bg-box">
             <span class="item bg-red">项目1</span>
             <span class="item bg-blue">项目2</span>
           </div>
-          <div class="desc">2、使用弹性布局处理（黄色盒子加上类 f-fs-c ）</div>
+          <div class="desc">2、使用弹性布局基础类处理：f-fs-c</div>
           <div class="exam bg-box f-fs-c">
             <span class="item bg-red">项目1</span>
             <span class="item bg-blue">项目2</span>
@@ -127,41 +127,39 @@
             <div class="bg-box f-c-c f-1">
               <div class="item bg-red">项目1</div>
               <div class="item bg-blue">项目2</div>
-              <div class="item bg-green">项目2</div>
+              <div class="item bg-green">项目3</div>
             </div>
             <div class="flex-name f-c-c">f-sb-c</div>
             <div class="bg-box f-sb-c f-1">
               <div class="item bg-red">项目1</div>
               <div class="item bg-blue">项目2</div>
-              <div class="item bg-green">项目2</div>
+              <div class="item bg-green">项目3</div>
             </div>
             <div class="flex-name f-c-c">f-sa-c</div>
             <div class="bg-box f-sa-c f-1">
               <div class="item bg-red">项目1</div>
               <div class="item bg-blue">项目2</div>
-              <div class="item bg-green">项目2</div>
+              <div class="item bg-green">项目3</div>
             </div>
             <div class="flex-name f-c-c-c">
-              <div>f-sa-s f-se</div>
+              <div>f-sa-c&nbsp;&nbsp;&nbsp;&nbsp;f-se</div>
               <div class="tips">f-sb-se的兼容性处理方案</div>
             </div>
-            <div class="bg-box f-sa-s f-se f-1">
-              <div class="item-s f-c-c-c bg-red" style="height: 90px">
-                项目1<br />height: 90px
-              </div>
-              <div class="item-s f-c-c-c bg-blue">项目2<br /></div>
-              <div class="item-s f-c-c-c bg-green">项目2<br /></div>
+            <div class="bg-box f-sa-c f-se f-1">
+              <div class="item f-c-c-c bg-red">项目1</div>
+              <div class="item f-c-c-c bg-blue">项目2</div>
+              <div class="item f-c-c-c bg-green">项目3</div>
             </div>
             <div class="flex-name f-c-c-c">
               <div>f-sb-s</div>
               <div class="tips">高度会跟最高的项目对齐</div>
             </div>
             <div class="bg-box f-sb-s f-1">
-              <div class="item-s f-c-c-c bg-red" style="height: 90px">
-                项目1<br />height: 90px
+              <div class="item-s f-c-c-c bg-red" style="height: 100px">
+                项目1<br />height: 100px
               </div>
-              <div class="item-s f-c-c-c bg-blue">项目2<br /></div>
-              <div class="item-s f-c-c-c bg-green">项目2<br /></div>
+              <div class="item-s f-c-c-c bg-blue">项目2<br />（未设置高度）</div>
+              <div class="item-s f-c-c-c bg-green">项目3<br />（未设置高度）</div>
             </div>
             <div class="mt-16 f-c-c">其他类似，不再列举……</div>
           </div>
