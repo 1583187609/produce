@@ -269,39 +269,37 @@
   font-size: 16px;
 }
 .quick-tools {
+  display: block;
   border-radius: 8px;
   background: #eee;
-  position: fixed;
+  position: absolute;
   left: calc(50vw + 1200px*0.5 + 6px);
   bottom: 16px;
   border: 1px solid #faa57e;
   overflow: hidden;
 }
-.quick-tools .item {
+.quick-tools .anchor {
   cursor: pointer;
+  color: #666;
+  text-decoration: none;
   padding: 4px;
   height: 60px;
   width: 60px;
 }
-.quick-tools .item:not(:last-child) {
+.quick-tools .anchor:not(:last-child) {
   border-bottom: 1px solid #faa57e;
 }
-.quick-tools .item:hover {
-  background: #ddd;
-}
-.quick-tools .item .anchor {
-  color: #666;
-  text-decoration: none;
-}
-.quick-tools .item .anchor:hover {
+.quick-tools .anchor:hover {
   color: #000;
   font-weight: normal;
+  background: #ddd;
 }
-.quick-tools .item .sec-num {
+.quick-tools .anchor .sec-num {
+  color: #ff5000;
   font-size: 16px;
   font-weight: 500;
 }
-.quick-tools .item .text {
+.quick-tools .anchor .text {
   margin-top: 4px;
   font-size: 12px;
 }

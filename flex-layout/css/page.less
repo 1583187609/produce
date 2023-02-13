@@ -1,3 +1,4 @@
+@color-theme: #ff5000;
 @container-width: 1200px;
 .bg-box {
   border: 4px solid yellowgreen;
@@ -319,15 +320,18 @@
 .quick-tools {
   @size: 60px;
   @border-color: #faa57e;
+  display: block;
   border-radius: 8px;
   background: #eee;
-  position: fixed;
+  position: absolute;
   left: calc(50vw + @container-width*0.5 + 6px);
   bottom: 16px;
   border: 1px solid @border-color;
   overflow: hidden;
-  .item {
+  .anchor {
     cursor: pointer;
+    color: #666;
+    text-decoration: none;
     padding: 4px;
     height: @size;
     width: @size;
@@ -335,17 +339,12 @@
       border-bottom: 1px solid @border-color;
     }
     &:hover {
+      color: #000;
+      font-weight: normal;
       background: #ddd;
     }
-    .anchor {
-      color: #666;
-      text-decoration: none;
-      &:hover {
-        color: #000;
-        font-weight: normal;
-      }
-    }
     .sec-num {
+      color: @color-theme;
       font-size: 16px;
       font-weight: 500;
     }
