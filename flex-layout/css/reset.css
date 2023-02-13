@@ -8,7 +8,7 @@ a {
   color: blue;
 }
 a:hover {
-  color: #000;
+  font-weight: bold;
 }
 ::-webkit-scrollbar {
   width: 8px;
