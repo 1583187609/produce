@@ -26,6 +26,12 @@
 .bg-lightgray {
   background: lightgray;
 }
+.empty-anchor {
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
 .tips {
   color: red;
 }
@@ -39,7 +45,7 @@
   background: #aaa;
 }
 .container {
-  padding: 32px 16px 60px;
+  padding: 0 16px 32px;
   width: 1200px;
   max-height: 100vh;
   overflow: auto;
@@ -48,6 +54,7 @@
 }
 .container .h1 {
   font-size: 30px;
+  margin-top: 32px;
   margin-bottom: 16px;
   text-align: center;
 }
@@ -248,4 +255,53 @@
   height: 40px;
   color: #fff;
   background: #000;
+}
+.issues {
+  margin: 32px 0;
+  text-align: center;
+  font-size: 22px;
+}
+.issues a {
+  font-size: 20px;
+}
+.issues a.btn {
+  margin-top: 8px;
+  font-size: 16px;
+}
+.quick-tools {
+  border-radius: 8px;
+  background: #eee;
+  position: fixed;
+  left: calc(50vw + 1200px*0.5 + 6px);
+  bottom: 16px;
+  border: 1px solid #faa57e;
+  overflow: hidden;
+}
+.quick-tools .item {
+  cursor: pointer;
+  padding: 4px;
+  height: 60px;
+  width: 60px;
+}
+.quick-tools .item:not(:last-child) {
+  border-bottom: 1px solid #faa57e;
+}
+.quick-tools .item:hover {
+  background: #ddd;
+}
+.quick-tools .item .anchor {
+  color: #666;
+  text-decoration: none;
+}
+.quick-tools .item .anchor:hover {
+  color: #000;
+  font-weight: normal;
+}
+.quick-tools .item .sec-num {
+  font-size: 16px;
+  font-weight: 500;
+}
+.quick-tools .item .text {
+  margin-top: 4px;
+  font-size: 12px;
 }

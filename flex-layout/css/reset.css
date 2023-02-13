@@ -10,6 +10,9 @@ a {
 a:hover {
   font-weight: bold;
 }
+li {
+  list-style: none;
+}
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
