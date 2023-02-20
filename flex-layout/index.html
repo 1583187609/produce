@@ -466,12 +466,25 @@
           </div>
         </div>
       </section>
-      <div class="issues f-c-c-c">
+      <div id="donate" class="donate f-c-c-c">
+        <div class="thanks">码文不易 感谢捐赠</div>
+        <div class="f-c-c">
+          <div class="f-c-c-c mr-32">
+            <img class="img" src="./img/wx_skm.png" />
+            <b class="type-text">微信</b>
+          </div>
+          <div class="f-c-c-c">
+            <img class="img" src="./img/zfb_skm.png" />
+            <b class="type-text">支付宝</b>
+          </div>
+        </div>
+      </div>
+      <div class="issue f-c-c-c">
         <div>
           如有任何问题或疑问，欢迎提<a
             href="https://gitee.com/fanlichuan/produce/issues"
             target="_blank"
-            >issues</a
+            >issue</a
           >~
         </div>
         <a href="#top" class="btn">回到顶部</a>
@@ -509,4 +522,16 @@
       </a>
     </nav>
   </body>
+  <script>
+    function $(ele) {
+      return document.querySelector(ele);
+    }
+
+    //是否显示捐赠收款款码（到了指定时间，就显示）
+    function judegShowDonate(assignTime = "2023-10-1") {
+      const showDonate = Date.now() >= new Date(assignTime).getTime();
+      $("#donate").style.display = showDonate ? "flex" : "none";
+    }
+    judegShowDonate();
+  </script>
 </html>
