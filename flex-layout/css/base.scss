@@ -93,6 +93,7 @@ $flexWrap: (
 .f-empty {
   height: 0 !important;
   visibility: hidden !important;
+  overflow: hidden;
 }
 
 /**
@@ -132,7 +133,7 @@ $flexWrap: (
 
 /**
 * padding、margin间距
-* p-2 ~ ml-32
+* p-0 ~ ml-32
 */
 $gapTypes: (
   p: padding,
@@ -147,7 +148,7 @@ $gapDirections: (
 );
 @each $tKey, $tVal in $gapTypes {
   @each $dKey, $dVal in $gapDirections {
-    @for $i from 1 through 16 {
+    @for $i from 0 through 16 {
       $num: $i * 2;
       @if $dKey == a {
         .#{$tKey}-#{$num} {
@@ -160,4 +161,11 @@ $gapDirections: (
       }
     }
   }
+}
+
+.ml-a {
+  margin-left: auto;
+}
+.mr-a {
+  margin-right: auto;
 }

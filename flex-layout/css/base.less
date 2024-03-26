@@ -93,6 +93,7 @@ each(@justifyContent, .(@jVal, @jKey) {
 .f-empty {
   height: 0 !important;
   visibility: hidden !important;
+  overflow: hidden;
 }
 
 /**
@@ -133,7 +134,7 @@ each(@justifyContent, .(@jVal, @jKey) {
 
 /**
 * padding、margin间距
-* pt-2 ~ ml-32
+* pt-0 ~ ml-32
 */
 @gapTypes: {
   p: padding;
@@ -167,6 +168,13 @@ each(@gapTypes, .(@tVal, @tKey) {
       }
       .for-g((@i + 1)); // 递归调用自身
     }
-    .for-g(1); // 调用循环,从1，直到<=16
+    .for-g(0); // 调用循环,从0，直到<=16
   });
 });
+
+.ml-a {
+  margin-left: auto;
+}
+.mr-a {
+  margin-right: auto;
+}
